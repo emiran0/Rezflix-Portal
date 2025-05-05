@@ -1,0 +1,17 @@
+{
+    "movies": [
+      {
+        "imdb": "https://www.imdb.com/title/tt0111161/",
+        "addedDate": "2025-05-01",
+        "qualityProfile": "HD"
+      }
+    ],
+    "tvShows": [
+      {
+        "imdb": "https://www.imdb.com/title/tt0903747/",
+        "addedDate": "2025-05-03",
+        "qualityProfile": "Full HD"
+      }
+    ]
+  }
+  

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rezflix Portal</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- FontAwesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">REZFLIX</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#releases">Latest Releases</a></li>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#guides">Guides</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h2>Welcome to Rezflix</h2>
+        <p>Your gateway to all Rezflix services and applications.</p>
+      </div>
+    </section>
+
+    <!-- Latest Releases -->
+    <section id="releases" class="releases-section container">
+      <h2>Latest Releases</h2>
+
+      <h3>Movies</h3>
+      <div class="carousel-container">
+        <button class="carousel-nav prev" data-target="movies-carousel">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div id="movies-carousel" class="carousel"></div>
+        <button class="carousel-nav next" data-target="movies-carousel">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <h3>TV Shows</h3>
+      <div class="carousel-container">
+        <button class="carousel-nav prev" data-target="tv-carousel">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div id="tv-carousel" class="carousel"></div>
+        <button class="carousel-nav next" data-target="tv-carousel">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Applications -->
+    <section id="apps" class="apps-section container">
+      <h2>Applications</h2>
+      <div id="apps-container" class="apps-grid"></div>
+    </section>
+
+    <!-- Guides -->
+    <section id="guides" class="guides-section container">
+      <h2>Guides</h2>
+      <div id="guides-container" class="guides-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Rezflix. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/apps.js"></script>
+  <script src="js/releases.js"></script>
+</body>
+</html>
