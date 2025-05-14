@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rezflix Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pVUq6G2BdxeF0ZBfh3MgJL/6RgTXe09vAdc0sYrDXjz6x68w8p6n3zj4x4WhVxoM0iN/3kZIXcpH+Y7XbH+MBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  </head>
+  <body>
+    <div class="auth-background">
+      <div class="auth-container">
+        <div class="auth-logo">
+          <img src="assets/logo.png" alt="Rezflix Logo" />
+        </div>
+        <h2>Create Account</h2>
+        <form id="register-form">
+          <div class="input-group">
+            <input type="text" id="reg-name" required placeholder=" " />
+            <label for="reg-name">Full Name</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="reg-username" required placeholder=" " />
+            <label for="reg-username">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="reg-email" required placeholder=" " />
+            <label for="reg-email">Email</label>
+          </div>
+          <div class="input-group password-group">
+            <input type="password" id="reg-password" required placeholder=" " />
+            <button type="button" class="toggle-password">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+            <label for="reg-password">Password</label>
+          </div>
+          <div class="input-group password-group">
+            <input
+              type="password"
+              id="reg-password2"
+              required
+              placeholder=" "
+            />
+            <button type="button" class="toggle-password">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+            <label for="reg-password2">Confirm Password</label>
+          </div>
+          <button type="submit" class="btn">Register</button>
+        </form>
+        <p class="switch-link">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+        <p class="auth-error" id="reg-error"></p>
+        <p class="auth-success" id="reg-success"></p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".toggle-password").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const pw = this.previousElementSibling;
+            const icon = this.querySelector("i");
+            if (pw.type === "password") {
+              pw.type = "text";
+              icon.classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+              pw.type = "password";
+              icon.classList.replace("fa-eye-slash", "fa-eye");
+            }
+          });
+        });
+      });
+    </script>
+    <script src="js/auth-register.js"></script>
+  </body>
+</html>
